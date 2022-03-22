@@ -1,0 +1,38 @@
+body {
+  background:black url(universe.jpg);
+  animation: stars 205s linear alternate; 
+}
+
+#box {
+  background:url(http://bluemarble.chrisbelldesigns.com/img/02.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:800px;
+  height:800px;
+  display: flex;
+  animation: movimiento 7s linear 0s 2.5;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  animation-fill-mode: forwards;
+  z-index : -1; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes movimiento {
+  0% { background-position:0 0 }
+  100% { background-position:1675px 0 }
+}
+
+@keyframes stars {
+  0% { background-position:0 0 }
+  100% { background-position:0 100% }
+}
+  
